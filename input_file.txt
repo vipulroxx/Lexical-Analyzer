@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int power(int base, int exponent) {
+    int result = 1;
+    for (int i = 0; i < exponent; i++) {
+        result *= base;
+    }
+    return result;
+}
+
+void print_sequence(int n) {
+    for (int i = 1; i <= n; i++) {
+        if (i % 2 == 0) {
+            printf("Even number: %d\n", i);
+        } else {
+            printf("Odd number: %d\n", i);
+        }
+    }
+}
+
+int main() {
+    int x = 5;
+    int y = 3;
+    
+    int result1 = power(x, y);
+    printf("%d^%d = %d\n", x, y, result1);
+    
+    printf("Printing sequence of numbers:\n");
+    print_sequence(10);
+    
+    // Calculate the sum of first 10 natural numbers
+    int sum = 0;
+    for (int i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    printf("Sum of first 10 natural numbers: %d\n", sum);
+    
+    return 0;
+}
